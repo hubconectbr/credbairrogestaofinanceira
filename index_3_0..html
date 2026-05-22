@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Gestão Financeira - Terceiro Setor</title>
+    <!-- Tailwind CSS para design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts para tipografia limpa -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar para estética premium */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Estilização avançada para Impressão Impressa/PDF */
+        @media print {
+            body {
+                background: white !important;
+                color: #0f172a !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .print-card {
+                border: 1px solid #e2e8f0 !important;
+                background-color: #ffffff !important;
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- WRAPPER PRINCIPAL DE TELA (Ocultado ao imprimir) -->
+    <div id="screen-layout" class="no-print flex-1 flex flex-col">
+        <!-- Topbar/Header -->
+        <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16 items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-indigo-600 text-white rounded-lg shadow-md shadow-indigo-100">
+                            <!-- Icon: Landmark/Building -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-lg font-bold text-slate-900 leading-tight">Gestão Financeira no Terceiro Setor</h1>
+                            <p class="text-xs text-slate-500">Guia Prático de Sustentabilidade e Transparência</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                            Versão Interativa & Planejamento
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full flex flex-col md:flex-row gap-8">
+            
+            <!-- Sidebar Navigation (Responsive) -->
+            <aside class="w-full md:w-64 shrink-0">
+                <nav class="space-y-1 bg-white p-4 rounded-xl border border-slate-200 shadow-sm sticky top-24">
+                    <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Navegação</p>
+                    
+                    <!-- Adicionadas as classes text-left e justify-start para alinhar e unificar toda a indentação lateral -->
+                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all bg-indigo-50 text-indigo-700">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
+                        <span>Painel Principal</span>
+                    </button>
+
+                    <button onclick="switchTab('manual')" id="btn-manual" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span>Manual Orientativo</span>
+                    </button>
+
+                    <button onclick="switchTab('tripe')" id="btn-tripe" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <span>1. O Tripé de Sustentação</span>
+                    </button>
+
+                    <button onclick="switchTab('governanca')" id="btn-governanca" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <span>2. Governança e Regras</span>
+                    </button>
+
+                    <button onclick="switchTab('contratos')" id="btn-contratos" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>3. Contratos e Modelos</span>
+                    </button>
+
+                    <button onclick="switchTab('contas')" id="btn-contas" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        <span>4. Prestação de Contas</span>
+                    </button>
+
+                    <button onclick="switchTab('desafios')" id="btn-desafios" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span>5. Desafios & Oportunidades</span>
+                    </button>
+
+                    <div class="pt-4 border-t border-slate-100 mt-4">
+                        <div class="bg-indigo-50 p-3 rounded-lg">
+                            <span class="text-xs font-semibold text-indigo-800 block mb-1">Maturidade Geral</span>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="mini-progress-bar" class="bg-indigo-600 h-full transition-all duration-500" style="width: 0%"></div>
+                                </div>
+                                <span id="mini-progress-text" class="text-xs font-bold text-indigo-900">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Workspace (Dynamic Content) -->
+            <main class="flex-1 space-y-6">
+
+                <!-- TAB: DASHBOARD (HOME) -->
+                <div id="tab-content-dashboard" class="tab-pane space-y-6">
+                    <!-- Welcome Card -->
+                    <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-indigo-900 text-white p-6 sm:p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent"></div>
+                        <div class="relative z-10 max-w-2xl">
+                            <span class="bg-indigo-500/30 text-indigo-200 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Manual e Diagnóstico de Campo</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold mt-3 tracking-tight">Sustentabilidade e Transparência na Gestão Financeira</h2>
+                            <p class="mt-2 text-indigo-100 text-sm sm:text-base leading-relaxed">
+                                Cuidar das finanças no Terceiro Setor vai muito além de "pagar contas". Trata-se de transformar cada centavo captado em impacto real e auditável. Use as abas para ler as orientações práticas, complete as tarefas de cada etapa e monte seu plano de ação para elevar a maturidade institucional.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD: Identificação da OSC e Projeto -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-100 pb-4 mb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Dados de Identificação do Diagnóstico</h3>
+                                <p class="text-sm text-slate-500">Insira as informações da sua instituição para personalizar os relatórios físicos e digitais.</p>
+                            </div>
+                            <!-- PRINT ACTION BUTTON -->
+                            <button onclick="printReport()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2.5 rounded-lg shadow-sm flex items-center space-x-2 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                                </svg>
+                                <span>Imprimir Manual & Plano de Ação</span>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Nome da Associação / OSC</label>
+                                <input type="text" id="info-associacao" oninput="saveAndSyncInfo()" placeholder="Ex: Associação Esperança do Amanhã" class="block w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Nome do Projeto Social</label>
+                                <input type="text" id="info-projeto" oninput="saveAndSyncInfo()" placeholder="Ex: Projeto Esporte e Inclusão Social" class="block w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Nome do Responsável pela Liderança / Presidência</label>
+                                <input type="text" id="info-lideranca" oninput="saveAndSyncInfo()" placeholder="Ex: Maria Clara Santos" class="block w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Nome do Responsável Técnico pelo Projeto</label>
+                                <input type="text" id="info-gestor" oninput="saveAndSyncInfo()" placeholder="Ex: João Henrique Silva" class="block w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid of Thermometer and Checklist -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <!-- Dynamic Thermometer Card -->
+                        <div class="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-bold text-slate-800 text-lg">Termômetro de Maturidade Geral</h3>
+                                    <span class="p-1.5 bg-slate-100 rounded-lg text-slate-500">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                    </span>
+                                </div>
+                                <p class="text-sm text-slate-500 mb-6">Complete as ações práticas propostas nas abas ao lado para elevar a barra de maturidade da sua OSC.</p>
+                                
+                                <!-- Visual Thermometer Container -->
+                                <div class="relative py-4 flex flex-col items-center">
+                                    <div class="w-full bg-slate-100 rounded-2xl p-4 border border-slate-150">
+                                        <div class="flex justify-between text-xs font-semibold text-slate-400 mb-2">
+                                            <span>Maturidade Inicial</span>
+                                            <span>Maturidade Alta</span>
+                                        </div>
+                                        <div class="relative w-full h-8 bg-slate-200 rounded-full overflow-hidden flex items-center shadow-inner">
+                                            <div id="thermometer-fill" class="h-full bg-gradient-to-r from-amber-400 via-indigo-500 to-emerald-500 transition-all duration-700 ease-out" style="width: 0%"></div>
+                                            <div id="thermometer-value" class="absolute inset-0 flex items-center justify-center font-extrabold text-slate-900 drop-shadow-sm text-sm">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Status Badge and Next Actions descriptor -->
+                            <div class="mt-6 pt-6 border-t border-slate-100">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">Situação Atual:</span>
+                                <div id="maturity-badge" class="px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800">
+                                    <p class="font-bold text-sm">Nível Inicial (Risco Alto)</p>
+                                    <p class="text-xs text-amber-700/80 mt-1">A organização está vulnerável a imprevistos de caixa e erros contábeis. Siga os passos sugeridos ao lado.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resumo dos Planos de Ação -->
+                        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                            <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                                <div>
+                                    <h3 class="font-bold text-slate-800 text-lg">Resumo de Evolução por Etapa</h3>
+                                    <p class="text-sm text-slate-500">Progresso dos planos de ação de cada módulo</p>
+                                </div>
+                                <button onclick="resetAllChecklists()" class="text-xs font-semibold text-slate-400 hover:text-indigo-600 transition-all flex items-center space-x-1">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 12H12"></path></svg>
+                                    <span>Resetar Tudo</span>
+                                </button>
+                            </div>
+
+                            <!-- Resumo dos 5 módulos -->
+                            <div class="space-y-4">
+                                <!-- Módulo 1 -->
+                                <div onclick="switchTab('tripe')" class="cursor-pointer hover:bg-slate-50 p-2.5 rounded-xl border border-slate-100 transition-all">
+                                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                                        <span>1. O Tripé de Sustentação</span>
+                                        <span id="progress-text-tripe" class="text-indigo-600">0%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div id="progress-bar-tripe" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <!-- Módulo 2 -->
+                                <div onclick="switchTab('governanca')" class="cursor-pointer hover:bg-slate-50 p-2.5 rounded-xl border border-slate-100 transition-all">
+                                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                                        <span>2. Governança e Regras</span>
+                                        <span id="progress-text-gov" class="text-indigo-600">0%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div id="progress-bar-gov" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <!-- Módulo 3 -->
+                                <div onclick="switchTab('contratos')" class="cursor-pointer hover:bg-slate-50 p-2.5 rounded-xl border border-slate-100 transition-all">
+                                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                                        <span>3. Contratos e Modelos</span>
+                                        <span id="progress-text-contratos" class="text-indigo-600">0%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div id="progress-bar-contratos" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <!-- Módulo 4 -->
+                                <div onclick="switchTab('contas')" class="cursor-pointer hover:bg-slate-50 p-2.5 rounded-xl border border-slate-100 transition-all">
+                                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                                        <span>4. Prestação de Contas</span>
+                                        <span id="progress-text-contas" class="text-indigo-600">0%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div id="progress-bar-contas" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <!-- Módulo 5 -->
+                                <div onclick="switchTab('desafios')" class="cursor-pointer hover:bg-slate-50 p-2.5 rounded-xl border border-slate-100 transition-all">
+                                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                                        <span>5. Desafios & Oportunidades</span>
+                                        <span id="progress-text-desafios" class="text-indigo-600">0%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div id="progress-bar-desafios" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulation Tools (Orçamento vs Realizado) -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <div class="border-b border-slate-100 pb-4 mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Ferramenta: Simulador Simplificado de Saúde de Projeto</h3>
+                                <p class="text-sm text-slate-500">Monitore as despesas estruturais e o equilíbrio de receitas de forma ágil.</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Simulação Local</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Inputs -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Receitas Previstas (Doações/Editais)</label>
+                                    <div class="relative rounded-md shadow-sm">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <span class="text-slate-400 text-sm">R$</span>
+                                        </div>
+                                        <input type="number" id="sim-receita" oninput="calculateSimulation()" class="block w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" value="50000">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Despesas de Projetos (Atividades Fim)</label>
+                                    <div class="relative rounded-md shadow-sm">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <span class="text-slate-400 text-sm">R$</span>
+                                        </div>
+                                        <input type="number" id="sim-despesa-projeto" oninput="calculateSimulation()" class="block w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" value="30000">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Custos Administrativos / Estruturais (Fim/Meio)</label>
+                                    <div class="relative rounded-md shadow-sm">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <span class="text-slate-400 text-sm">R$</span>
+                                        </div>
+                                        <input type="number" id="sim-despesa-adm" oninput="calculateSimulation()" class="block w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" value="12000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Results Indicators -->
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Status do Resultado</span>
+                                    <div class="flex items-baseline mt-2">
+                                        <span class="text-3xl font-extrabold text-indigo-600" id="sim-saldo">R$ 8.000,00</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1" id="sim-saldo-tipo">Superávit operacional apurado.</p>
+                                </div>
+
+                                <div class="mt-4 pt-4 border-t border-slate-200">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Eficiência de Recursos (Fim/Meio)</span>
+                                    <div class="flex items-center space-x-2 mt-2">
+                                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                            <div id="sim-ratio-bar" class="bg-indigo-600 h-full" style="width: 71%"></div>
+                                        </div>
+                                        <span id="sim-ratio-text" class="text-xs font-bold text-slate-600">71%</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-1">Recomendado: No mínimo 70% de aplicação na atividade finalística.</p>
+                                </div>
+                            </div>
+
+                            <!-- Recommendations Card based on simulation -->
+                            <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-5 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-800">Recomendação do Sistema</span>
+                                    <p class="text-xs text-indigo-900 mt-2 leading-relaxed" id="sim-recommendation">
+                                        Seu projeto possui um superávit equilibrado. Recomendamos separar no mínimo 10% deste saldo para compor o <strong>Fundo de Reserva</strong> institucional, mitigando a sazonalidade e reduzindo a dependência de novos editais a curto prazo.
+                                    </p>
+                                </div>
+                                <div class="text-xs font-semibold text-indigo-700 bg-indigo-100/60 p-2.5 rounded-lg border border-indigo-200/50 mt-4">
+                                    <span class="block text-indigo-900 font-bold mb-0.5">Diretriz Técnica:</span>
+                                    Use demonstrativos integrados (DRE/DFC) para relatórios contábeis oficiais.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: MANUAL ORIENTATIVO COMPLETO -->
+                <div id="tab-content-manual" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Guia Metodológico</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">Manual Orientativo de Apoio ao Coordenador</h2>
+                                <p class="text-xs text-slate-500 mt-1">Diretrizes aprofundadas para estruturação de processos e elaboração do plano de ação.</p>
+                            </div>
+                            <button onclick="printReport()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs px-3.5 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2
