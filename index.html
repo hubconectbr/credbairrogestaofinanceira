@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,37 +92,36 @@
                 <nav class="space-y-1 bg-white p-4 rounded-xl border border-slate-200 shadow-sm sticky top-24">
                     <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Navegação</p>
                     
-                    <!-- Adicionadas as classes text-left e justify-start para alinhar e unificar toda a indentação lateral -->
-                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all bg-indigo-50 text-indigo-700">
+                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all bg-indigo-50 text-indigo-700">
                         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
                         <span>Painel Principal</span>
                     </button>
 
-                    <button onclick="switchTab('manual')" id="btn-manual" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <button onclick="switchTab('manual')" id="btn-manual" class="tab-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
                         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                         <span>Manual Orientativo</span>
                     </button>
 
-                   <button onclick="switchTab('tripe')" id="btn-tripe" class="tab-btn w-full flex items-center justify-start text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <button onclick="switchTab('tripe')" id="btn-tripe" class="tab-btn w-full flex items-center justify-start text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
                         <div class="w-5 h-5 flex items-center justify-center mr-3 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                             </svg>
-                         </div>
+                        </div>
                         <span>1. O Tripé de Sustentação</span>
                     </button>
 
-                    <button onclick="switchTab('governanca')" id="btn-governanca" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <button onclick="switchTab('governanca')" id="btn-governanca" class="tab-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
                         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         <span>2. Governança e Regras</span>
                     </button>
 
-                    <button onclick="switchTab('contratos')" id="btn-contratos" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <button onclick="switchTab('contratos')" id="btn-contratos" class="tab-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
                         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         <span>3. Contratos e Modelos</span>
                     </button>
 
-                    <button onclick="switchTab('contas')" id="btn-contas" class="tab-btn w-full flex items-center justify-start text-left space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <button onclick="switchTab('contas')" id="btn-contas" class="tab-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-slate-900">
                         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                         <span>4. Prestação de Contas</span>
                     </button>
@@ -133,7 +132,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
                             </svg>
                         </div>
-                    <span>5. Desafios & Oportunidades</span>
+                        <span>5. Desafios & Oportunidades</span>
                     </button>
 
                     <div class="pt-4 border-t border-slate-100 mt-4">
@@ -401,4 +400,1115 @@
                                 <p class="text-xs text-slate-500 mt-1">Diretrizes aprofundadas para estruturação de processos e elaboração do plano de ação.</p>
                             </div>
                             <button onclick="printReport()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs px-3.5 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition-all">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                                <span>Versão Impressa</span>
+                            </button>
+                        </div>
+
+                        <div class="space-y-8">
+                            <!-- 1. O Tripé de Sustentação -->
+                            <div class="p-6 bg-slate-50 border border-slate-150 rounded-xl">
+                                <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black">1</span>
+                                    <span>O Tripé de Sustentação (Orçamento, Caixa e Contabilidade)</span>
+                                </h3>
+                                <div class="space-y-4 text-xs text-slate-600 leading-relaxed pl-8">
+                                    <p>
+                                        A saúde financeira de uma organização reside no equilíbrio e comunicação contínua entre três pilares. O coordenador do projeto deve se atentar aos seguintes roteiros operacionais:
+                                    </p>
+                                    <ul class="list-disc pl-4 space-y-2">
+                                        <li>
+                                            <strong>Como operacionalizar o Orçamento Base Zero (OBZ):</strong> Ao invés de simplesmente reajustar o orçamento anterior pela inflação, monte a grade orçamentária partindo de uma planilha vazia. Cada despesa deve ter um nexo causal justificado por uma meta física (Exemplo: "Contratação de 2 oficineiros de futebol para atender 60 alunos por 10 meses").
+                                        </li>
+                                        <li>
+                                            <strong>Acompanhamento Diário de Caixa:</strong> Implante o processo de conciliação bancária diária. Isso consiste em bater cada entrada e saída do extrato bancário com seu correspondente comprovante de despesa ou recibo de entrada, permitindo projetar o fôlego financeiro institucional (runway) e evitar surpresas de liquidez.
+                                        </li>
+                                        <li>
+                                            <strong>Contabilidade como Painel de Bordo:</strong> Não trate a contabilidade como um gerador de impostos. Exija do contador o Balanço Patrimonial e o Demonstrativo de Resultado (DRE) mensalmente. Utilize estes dados para comprovar a eficiência administrativa (custos meio x fins) para o conselho e patrocinadores.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 2. Governança e Regras -->
+                            <div class="p-6 bg-slate-50 border border-slate-150 rounded-xl">
+                                <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black">2</span>
+                                    <span>Governança, Transparência e Rigor Fiscal</span>
+                                </h3>
+                                <div class="space-y-4 text-xs text-slate-600 leading-relaxed pl-8">
+                                    <p>
+                                        Uma instituição perene exige regras institucionais claras para proteger os recursos e blindar os gestores de responsabilidade jurídica isolada:
+                                    </p>
+                                    <ul class="list-disc pl-4 space-y-2">
+                                        <li>
+                                            <strong>Criação da Política de Compras:</strong> Institua um manual simples de compras. Determine limites objetivos. Exemplo: compras de até R$ 500 dispensam cotação; entre R$ 501 e R$ 5.000 exigem pelo menos 3 propostas comerciais formais; acima disso exige aprovação do conselho.
+                                        </li>
+                                        <li>
+                                            <strong>Implantação da Segregação de Funções:</strong> Quem autoriza as despesas técnicas (Coordenador) não deve ser quem faz o cadastro do lote de pagamento no banco (Auxiliar administrativo) e tampouco quem assina/aprova o lote final (Presidente/Tesoureiro). Isso cria um fluxo de dupla verificação natural e reduz fraudes ou erros humanos.
+                                        </li>
+                                        <li>
+                                            <strong>Manutenção do Portfólio de Certidões (CND):</strong> Certidões negativas de débito do FGTS, INSS e tributos federais/estaduais/municipais devem ser emitidas preventivamente a cada 15 dias e salvas em uma pasta unificada de fácil acesso para novas habilitações de editais.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 3. Contratos e Modelos -->
+                            <div class="p-6 bg-slate-50 border border-slate-150 rounded-xl">
+                                <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black">3</span>
+                                    <span>Contratos e Segurança Jurídica</span>
+                                </h3>
+                                <div class="space-y-4 text-xs text-slate-600 leading-relaxed pl-8">
+                                    <p>
+                                        Contratos bem definidos dão estabilidade de execução aos projetos e garantem a regularidade contábil das parcerias:
+                                    </p>
+                                    <ul class="list-disc pl-4 space-y-2">
+                                        <li>
+                                            <strong>Uso das Minutas Padronizadas:</strong> Tenha 3 minutas modelo homologadas por assessoria jurídica: (1) Contrato de Prestação de Serviços (para terceiros e autônomos), (2) Termo de Doação espontânea de apoiadores e (3) Termo de Parceria para co-execuções.
+                                        </li>
+                                        <li>
+                                            <strong>Vínculo Físico-Financeiro:</strong> Condicione os pagamentos de qualquer prestador de serviço às entregas operacionais do cronograma do projeto (ex: "O pagamento da Parcela 2 está condicionado à entrega e aprovação técnica do Relatório de Atividades do mês anterior").
+                                        </li>
+                                        <li>
+                                            <strong>Formalização por Assinatura Digital:</strong> Migre os processos de assinatura física para plataformas digitais reconhecidas juridicamente, economizando tempo físico de envio e melhorando a rastreabilidade para auditorias externas.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 4. Prestação de Contas -->
+                            <div class="p-6 bg-slate-50 border border-slate-150 rounded-xl">
+                                <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black">4</span>
+                                    <span>Fluxo Eficiente de Prestação de Contas</span>
+                                </h3>
+                                <div class="space-y-4 text-xs text-slate-600 leading-relaxed pl-8">
+                                    <p>
+                                        A prestação de contas deve ser vista como o fechamento do impacto social gerado, traduzida em números claros e rastreáveis:
+                                    </p>
+                                    <ul class="list-disc pl-4 space-y-2">
+                                        <li>
+                                            <strong>Rigor Documental para Evitar Glosas:</strong> Glosa é o cancelamento/rejeição de despesas pelo financiador. Previna salvando de forma unificada: Nota Fiscal válida, Extrato Bancário demonstrando o débito na conta exclusiva do convênio, e o Comprovante de Transferência. Nunca pague despesas de convênios em espécie ou contas mistas.
+                                        </li>
+                                        <li>
+                                            <strong>Nexo Causal Claro:</strong> Toda fatura inserida deve possuir justificativa direta ao objetivo do projeto-fim. Uma nota de compra de combustível deve estar suportada pela folha de ponto ou roteiro de viagem do assistente social no atendimento às famílias assistidas.
+                                        </li>
+                                        <li>
+                                            <strong>Notas Explicativas:</strong> Ao término de cada período de prestação, monte um anexo com notas explicativas detalhando flutuações inevitáveis do plano original, como variações cambiais de compras autorizadas ou reajustes de insumos.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 5. Desafios & Oportunidades -->
+                            <div class="p-6 bg-slate-50 border border-slate-150 rounded-xl">
+                                <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black">5</span>
+                                    <span>Enfrentando Desafios e Criando Oportunidades</span>
+                                </h3>
+                                <div class="space-y-4 text-xs text-slate-600 leading-relaxed pl-8">
+                                    <p>
+                                        Garantir a perenidade operacional da organização exige foco ativo em mitigar a sazonalidade e expandir as captações livres:
+                                    </p>
+                                    <ul class="list-disc pl-4 space-y-2">
+                                        <li>
+                                            <strong>Composição do Fundo de Reserva:</strong> Estabeleça a regra interna de transferir entre 5% e 10% dos recursos não carimbados (doações livres, venda de produtos ou serviços) para uma conta de aplicação conservadora para formar a reserva de caixa, visando cobrir de 3 a 6 meses das despesas operacionais fixas.
+                                        </li>
+                                        <li>
+                                            <strong>Estratégia de Rateio Proporcional (Custos Meio):</strong> Para despesas corporativas não vinculáveis diretamente a um edital específico (como aluguel da sede administrativa, luz, internet e contabilidade), adote uma política de rateio formal e de base científica (ex: ratear de forma proporcional ao número de funcionários dedicados em cada projeto ativo). Submeta esta metodologia à aprovação formal do Conselho e anexe-a aos relatórios.
+                                        </li>
+                                        <li>
+                                            <strong>Diversificação Sistemática de Receitas:</strong> Monte um cronograma anual de frentes de captação equilibrando editais privados, emendas de fomento, planos de doação mensal de pessoas físicas e eventos beneficentes recorrentes.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB: TRIPE DA SAÚDE -->
+                <div id="tab-content-tripe" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <!-- Cabeçalho de Etapa com Termômetro Local -->
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Módulo 01</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">O Tripé da Saúde Financeira no Terceiro Setor</h2>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl shrink-0 w-full sm:w-64">
+                                <div class="flex justify-between text-xs font-bold text-indigo-900 mb-1">
+                                    <span>Ações Concluídas:</span>
+                                    <span id="tab-progress-text-tripe">0%</span>
+                                </div>
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="tab-progress-bar-tripe" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orientações Metodológicas -->
+                        <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 mb-8">
+                            <h3 class="font-bold text-indigo-950 text-sm mb-2 flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                <span>Orientações de Execução para o Coordenador</span>
+                            </h3>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Orçamento Participativo:</strong> Não monte a planilha sozinho na sua mesa. Envolva as equipes técnicas dos projetos para desenhar os custos das atividades práticas. Um bom orçamento no terceiro setor nasce da realidade do campo de atuação e divide-se em despesas finalísticas (diretas) e de custeio administrativo (meio).
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Gestão de Caixa:</strong> Realize a conciliação bancária diariamente. No terceiro setor, onde as receitas costumam vir em picos sazonais (como editais ou doações anuais), conhecer a curva de fôlego do fluxo de caixa previne a paralisação das atividades-chave por falta de liquidez imediata.
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed">
+                                <strong>Contabilidade Integrada:</strong> A contabilidade não serve apenas para fins burocráticos fiscais. Use os relatórios mensais (Balanço, DRE e DFC) para comprovar a higidez e a boa aplicação de cada real doado, apresentando esses demonstrativos de forma aberta aos doadores.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Checklist de Ação do Tripé -->
+                            <div class="border border-slate-200 rounded-xl p-5">
+                                <h3 class="font-bold text-slate-800 text-sm mb-4">Plano de Ação Prático</h3>
+                                <div class="space-y-3" id="checklist-tripe">
+                                    <!-- Populado via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Cartão de Conceitos Teóricos -->
+                            <div class="space-y-4">
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Como construir o Orçamento Base Zero (OBZ)?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Em vez de repetir os custos do ano anterior, planeje cada linha de custo partindo do zero, mapeando os insumos necessários diretamente atrelados às metas físicas de entrega do projeto para o ano fiscal.
+                                    </p>
+                                </div>
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Qual a importância da Provisão no Caixa?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Separe mensalmente os valores equivalentes aos encargos de equipe (como 13º salário e férias de técnicos) em uma conta poupança dedicada, evitando rombos orçamentários ao final do ano de exercício.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB: GOVERNANÇA -->
+                <div id="tab-content-governanca" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <!-- Cabeçalho de Etapa com Termômetro Local -->
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Módulo 02</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">Governança, Transparência e Rigor Fiscal</h2>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl shrink-0 w-full sm:w-64">
+                                <div class="flex justify-between text-xs font-bold text-indigo-900 mb-1">
+                                    <span>Ações Concluídas:</span>
+                                    <span id="tab-progress-text-gov">0%</span>
+                                </div>
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="tab-progress-bar-gov" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orientações Metodológicas -->
+                        <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 mb-8">
+                            <h3 class="font-bold text-indigo-950 text-sm mb-2 flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                <span>Orientações de Execução para o Coordenador</span>
+                            </h3>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Matriz de Alçadas de Aprovação:</strong> Crie limites financeiros objetivos. Exemplo: compras de até R$ 500 podem ser feitas livremente pela equipe técnica; até R$ 5.000 exigem a aprovação do Coordenador do Projeto; acima de R$ 5.000 precisam do aval da Presidência ou do Conselho Diretor.
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed">
+                                <strong>Segregação Completa de Funções:</strong> Evite o acúmulo de tarefas críticas por uma única pessoa. O funcionário que pesquisa os preços e seleciona o prestador de serviço não deve ser o mesmo que insere o pagamento no banco e autoriza a saída dos recursos. Isto blinda a organização contra potenciais desvios e erros de lançamento.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Checklist de Governança -->
+                            <div class="border border-slate-200 rounded-xl p-5">
+                                <h3 class="font-bold text-slate-800 text-sm mb-4">Plano de Ação Prático</h3>
+                                <div class="space-y-3" id="checklist-gov">
+                                    <!-- Populado via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Cartão de Conceitos Teóricos -->
+                            <div class="space-y-4">
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Como instituir a política de compras?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Determine que qualquer contratação acima de um limite básico passe por pelo menos 3 cotações de fornecedores distintos, registrando as propostas comerciais e a justificativa técnica para a escolha final.
+                                    </p>
+                                </div>
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Vigilância Fiscal Contínua</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Agende o levantamento quinzenal de Certidões Negativas de Débitos Trabalhistas, Federais e Municipais. Ter CNDs limpas e regulares é pré-requisito mandatório para manter convênios ativos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB: CONTRATOS -->
+                <div id="tab-content-contratos" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <!-- Cabeçalho de Etapa com Termômetro Local -->
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Módulo 03</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">Instrumentos Contratuais & Segurança Jurídica</h2>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl shrink-0 w-full sm:w-64">
+                                <div class="flex justify-between text-xs font-bold text-indigo-900 mb-1">
+                                    <span>Ações Concluídas:</span>
+                                    <span id="tab-progress-text-contratos">0%</span>
+                                </div>
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="tab-progress-bar-contratos" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orientações Metodológicas -->
+                        <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 mb-8">
+                            <h3 class="font-bold text-indigo-950 text-sm mb-2 flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span>Orientações de Execução para o Coordenador</span>
+                            </h3>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Minutas Padrão Homologadas:</strong> Não crie um modelo de contrato para cada prestador de serviço de última hora. Tenha minutas básicas (Prestação de Serviços, Termo de Doação e Termo de Parceria) validadas previamente por um advogado especialista no Terceiro Setor.
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed">
+                                <strong>Monitoramento de Retenções e Entregas:</strong> Alinhe sempre o cronograma financeiro às metas do cronograma técnico. No corpo do contrato, estipule que os pagamentos só ocorrerão após a aprovação formal do relatório de entrega das metas de cada etapa desenvolvida.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Checklist de Contratos -->
+                            <div class="border border-slate-200 rounded-xl p-5">
+                                <h3 class="font-bold text-slate-800 text-sm mb-4">Plano de Ação Prático</h3>
+                                <div class="space-y-3" id="checklist-contratos">
+                                    <!-- Populado via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Cartão de Conceitos Teóricos -->
+                            <div class="space-y-4">
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Contrato de Prestação de Serviços</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Deve detalhar o escopo da prestação de serviços (evitando generalismos), as condições de reembolso de despesas de viagem, prazos de pagamento e multas por rescisão prematura.
+                                    </p>
+                                </div>
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">O que é um Termo de Doação?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        É o documento que valida o repasse voluntário e espontâneo de verbas, sejam carimbadas ou livres para custeio institucional, protegendo a OSC de questionamentos sobre a origem dos fundos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB: PRESTAÇÃO DE CONTAS -->
+                <div id="tab-content-contas" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <!-- Cabeçalho de Etapa com Termômetro Local -->
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Módulo 04</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">O Ciclo de Prestação de Contas Eficiente</h2>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl shrink-0 w-full sm:w-64">
+                                <div class="flex justify-between text-xs font-bold text-indigo-900 mb-1">
+                                    <span>Ações Concluídas:</span>
+                                    <span id="tab-progress-text-contas">0%</span>
+                                </div>
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="tab-progress-bar-contas" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orientações Metodológicas -->
+                        <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 mb-8">
+                            <h3 class="font-bold text-indigo-950 text-sm mb-2 flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                                <span>Orientações de Execução para o Coordenador</span>
+                            </h3>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Rastreabilidade de Comprovantes:</strong> Guarde as notas fiscais originais imediatamente após a compra. Faça uma rotina de digitalização sistemática e nomeação lógica dos arquivos (ex: "Data_Rubrica_Nome_Valor.pdf").
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed">
+                                <strong>Vinculação de Causalidade:</strong> Um bom relatório de prestação de contas mostra o nexo entre o recurso financeiro despendido e o impacto real gerado. Não mostre apenas faturas de compra de canetas; mostre canetas compradas para equipar 50 jovens atendidos em uma oficina documentada em fotos.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Checklist de Prestação de Contas -->
+                            <div class="border border-slate-200 rounded-xl p-5">
+                                <h3 class="font-bold text-slate-800 text-sm mb-4">Plano de Ação Prático</h3>
+                                <div class="space-y-3" id="checklist-contas">
+                                    <!-- Populado via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Cartão de Conceitos Teóricos -->
+                            <div class="space-y-4">
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Como lidar com glosas de financiadores?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Glosa é a rejection de um pagamento pelo patrocinador por falta de coerência ou comprovantes válidos. Previna-se arquivando extratos bancários, comprovantes de transferência bancária e relatórios de evidências juntos das notas fiscais.
+                                    </p>
+                                </div>
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">O papel das Notas Explicativas</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Use notas explicativas ao final do relatório para justificar desvios orçamentários justos, como o reajuste inflacionário não previsto ou a substituição justificada de um prestador de serviço de campo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB: DESAFIOS -->
+                <div id="tab-content-desafios" class="tab-pane hidden space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <!-- Cabeçalho de Etapa com Termômetro Local -->
+                        <div class="border-b border-slate-100 pb-5 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Módulo 05</span>
+                                <h2 class="text-2xl font-extrabold text-slate-900">Desafios Comuns e as Oportunidades do Setor</h2>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-xl shrink-0 w-full sm:w-64">
+                                <div class="flex justify-between text-xs font-bold text-indigo-900 mb-1">
+                                    <span>Ações Concluídas:</span>
+                                    <span id="tab-progress-text-desafios">0%</span>
+                                </div>
+                                <div class="w-full bg-indigo-200 h-2 rounded-full overflow-hidden">
+                                    <div id="tab-progress-bar-desafios" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orientações Metodológicas -->
+                        <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5 mb-8">
+                            <h3 class="font-bold text-indigo-950 text-sm mb-2 flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                <span>Orientações de Execução para o Coordenador</span>
+                            </h3>
+                            <p class="text-xs text-indigo-900 leading-relaxed mb-3">
+                                <strong>Planejamento do Fundo de Reserva:</strong> Em períodos de alto superávit orçamentário (cobertura total de despesas), adote a disciplina de estipular que 5% a 10% da captação livre do período seja movida para um fundo de liquidez. Isso cobrirá a folha de pagamentos em meses de escassez institucional.
+                            </p>
+                            <p class="text-xs text-indigo-900 leading-relaxed">
+                                <strong>Diversificação e Sustentabilidade:</strong> Não dependa de um único grande patrocinador. Estruture estratégias de captação variadas ao longo do ano de atuação: leis de incentivo (Federal/Estadual), editais privados de filantropia corporativa, doações de pessoas físicas e a venda estruturada de produtos sociais institucionais.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Checklist de Desafios -->
+                            <div class="border border-slate-200 rounded-xl p-5">
+                                <h3 class="font-bold text-slate-800 text-sm mb-4">Plano de Ação Prático</h3>
+                                <div class="space-y-3" id="checklist-desafios">
+                                    <!-- Populado via JS -->
+                                </div>
+                            </div>
+
+                            <!-- Cartão de Conceitos Teóricos -->
+                            <div class="space-y-4">
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Como financiar os custos "meio" (administrativos)?</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        Muitos financiadores proíbem o repasse para custos estruturais. A solução reside em estruturar políticas de rateio claras com metodologia técnica justificada e aprovada pelo conselho para ratear despesas como água, luz, internet e equipes administrativas proporcionalmente entre todos os projetos de atuação ativos.
+                                    </p>
+                                </div>
+                                <div class="border border-slate-100 bg-slate-50/50 p-5 rounded-xl">
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wide mb-1">Capacitação Contínua de Lideranças</h4>
+                                    <p class="text-xs text-slate-600 leading-relaxed">
+                                        O time técnico e administrativo-financeiro de suporte deve participar regularmente de oficinas de atualização legal, fiscal, trabalhista e de prestação de contas, aprimorando os processos institucionais no cotidiano.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-200 mt-12 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-slate-500 text-xs">
+                <p>© 2026 Manual de Gestão Financeira para Organizações Sociais. Todos os direitos reservados.</p>
+                <p class="mt-2 sm:mt-0">Prototipagem de Painel Interativo de Gestão</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- DEDICATED PRINT CONTAINER (EXCLUSIVO PARA PDF/IMPRESSÃO) -->
+    <!-- ========================================== -->
+    <div id="print-area" class="hidden print:block bg-white text-slate-900 p-8 w-full max-w-4xl mx-auto">
+        <!-- Print Header -->
+        <div class="flex justify-between items-center border-b-2 border-slate-800 pb-4 mb-6">
+            <div>
+                <span class="text-[10px] font-bold text-indigo-700 tracking-widest uppercase block">DIRETRIZ DE GESTÃO - TERCEIRO SETOR</span>
+                <h1 class="text-2xl font-extrabold text-slate-900">Relatório e Plano de Ação de Sustentabilidade Financeira</h1>
+                <p class="text-xs text-slate-500 mt-0.5">Diagnóstico Técnico estruturado com base em diretrizes metodológicas integradas</p>
+            </div>
+            <div class="text-right">
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Gerado em</span>
+                <span id="print-current-date" class="text-xs font-bold text-slate-800">13 de Novembro de 2025</span>
+            </div>
+        </div>
+
+        <!-- Section 1: Identificação Institucional -->
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6 print-card">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Identificação da Organização Social & Projeto</h3>
+            <div class="grid grid-cols-2 gap-4 text-xs">
+                <div>
+                    <span class="block text-slate-400 font-medium">Associação / OSC:</span>
+                    <span id="print-associacao" class="font-bold text-slate-800 text-sm">Não Informado</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 font-medium">Projeto Social:</span>
+                    <span id="print-projeto" class="font-bold text-slate-800 text-sm">Não Informado</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 font-medium">Liderança / Presidência:</span>
+                    <span id="print-lideranca" class="font-bold text-slate-800 text-sm">Não Informado</span>
+                </div>
+                <div>
+                    <span class="block text-slate-400 font-medium">Responsável Técnico:</span>
+                    <span id="print-gestor" class="font-bold text-slate-800 text-sm">Não Informado</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Diagnóstico Geral de Maturidade -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-6 print-card">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Termômetro de Maturidade Geral</h3>
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs font-medium text-slate-500">Maturidade Final:</span>
+                    <span id="print-maturity-percent" class="text-lg font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">0%</span>
+                </div>
+            </div>
+            
+            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden mb-3 border border-slate-200 relative flex items-center">
+                <div id="print-maturity-bar" class="bg-gradient-to-r from-amber-400 via-indigo-500 to-emerald-500 h-full" style="width: 0%"></div>
+            </div>
+
+            <div id="print-maturity-desc" class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700">
+                Nível Inicial (Risco Alto). A organização está vulnerável a imprevistos de caixa e erros contábeis.
+            </div>
+        </div>
+
+        <!-- Section 3: Análise Econômica (Valores do Simulador) -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-6 print-card">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Análise Orçamentária e Proporções de Eficiência</h3>
+            
+            <div class="grid grid-cols-4 gap-4 text-center mb-4">
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Receitas</span>
+                    <span id="print-val-receita" class="text-sm font-bold text-slate-800">R$ 0,00</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Desp. Fim (Projeto)</span>
+                    <span id="print-val-projeto" class="text-sm font-bold text-slate-800">R$ 0,00</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Desp. Meio (Adm)</span>
+                    <span id="print-val-adm" class="text-sm font-bold text-slate-800">R$ 0,00</span>
+                </div>
+                <div class="p-3 bg-indigo-50 rounded-lg border border-indigo-100">
+                    <span class="text-[9px] font-bold text-indigo-600 uppercase tracking-widest block">Saldo Estimado</span>
+                    <span id="print-val-saldo" class="text-sm font-bold text-indigo-700">R$ 0,00</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs">
+                    <span class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Aplicação dos Recursos (Eficiência do Projeto-Fim)</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden border border-slate-300">
+                            <div id="print-ratio-bar" class="bg-indigo-600 h-full" style="width: 0%"></div>
+                        </div>
+                        <span id="print-ratio-text" class="font-bold text-slate-700">0%</span>
+                    </div>
+                    <span class="block text-[9px] text-slate-400 mt-2">Métrica recomendada pelas auditorias: Mínimo de 70% aplicados na ponta (Atividades Fim).</span>
+                </div>
+
+                <div class="p-3 bg-indigo-50/50 rounded-lg border border-indigo-100 text-xs">
+                    <span class="block text-[10px] font-bold text-indigo-800 uppercase tracking-wider mb-1">Recomendação Consultiva do Painel</span>
+                    <p id="print-recommendation-text" class="text-indigo-950 text-[11px] leading-relaxed">
+                        Insira os dados no simulador para visualizar as diretrizes automáticas de perenidade de caixa.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Detalhamento por Etapa / Planos de Ação Individuais -->
+        <div class="page-break"></div>
+        <h2 class="text-md font-bold text-slate-950 uppercase tracking-wider border-b-2 border-slate-800 pb-2 mb-4">Planos de Ação Detalhados por Etapa</h2>
+        
+        <!-- Módulo 1 no impresso -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-4 print-card text-xs">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-100 pb-1">
+                <span class="font-bold text-slate-800 uppercase">1. O Tripé de Sustentação</span>
+                <span id="print-sub-tripe" class="font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">Progresso: 0%</span>
+            </div>
+            <div class="space-y-1" id="print-checklist-tripe"></div>
+        </div>
+
+        <!-- Módulo 2 no impresso -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-4 print-card text-xs">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-100 pb-1">
+                <span class="font-bold text-slate-800 uppercase">2. Governança e Regras</span>
+                <span id="print-sub-gov" class="font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">Progresso: 0%</span>
+            </div>
+            <div class="space-y-1" id="print-checklist-gov"></div>
+        </div>
+
+        <!-- Módulo 3 no impresso -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-4 print-card text-xs">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-100 pb-1">
+                <span class="font-bold text-slate-800 uppercase">3. Contratos e Modelos</span>
+                <span id="print-sub-contratos" class="font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">Progresso: 0%</span>
+            </div>
+            <div class="space-y-1" id="print-checklist-contratos"></div>
+        </div>
+
+        <!-- Módulo 4 no impresso -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-4 print-card text-xs">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-100 pb-1">
+                <span class="font-bold text-slate-800 uppercase">4. Prestação de Contas</span>
+                <span id="print-sub-contas" class="font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">Progresso: 0%</span>
+            </div>
+            <div class="space-y-1" id="print-checklist-contas"></div>
+        </div>
+
+        <!-- Módulo 5 no impresso -->
+        <div class="border border-slate-200 rounded-xl p-4 mb-4 print-card text-xs">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-100 pb-1">
+                <span class="font-bold text-slate-800 uppercase">5. Desafios & Oportunidades</span>
+                <span id="print-sub-desafios" class="font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">Progresso: 0%</span>
+            </div>
+            <div class="space-y-1" id="print-checklist-desafios"></div>
+        </div>
+
+        <!-- SECTION 5: NOVO CONTEÚDO INTEGRADO NO IMPRESSO - MANUAL ORIENTATIVO DE CAMPOS -->
+        <div class="page-break"></div>
+        <h2 class="text-md font-bold text-slate-950 uppercase tracking-wider border-b-2 border-slate-800 pb-2 mb-4">Manual de Diretrizes Teóricas & Operacionais</h2>
+        <div class="space-y-5 text-xs text-slate-800 leading-relaxed">
+            <div>
+                <h3 class="font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">1. Gestão e Controle do Tripé (Orçamento, Caixa e Contabilidade)</h3>
+                <p>
+                    <strong>OBZ (Orçamento Base Zero):</strong> Planeje os custos partindo de uma planilha zerada. Cada rubrica de custo deve estar rigorosamente vinculada às metas físicas de entrega do projeto no período.
+                    <br><strong>Conciliação de Caixa:</strong> Realize batimentos diários de extratos bancários com os devidos recibos técnicos ou fiscais para evitar estouros de contas.
+                    <br><strong>Comunicação Contábil:</strong> Forneça dados de faturamento ao contador e exija dele balancetes consolidados para apresentar ao seu conselho e parceiros.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">2. Governança, Matriz de Alçadas e Compliance Fiscal</h3>
+                <p>
+                    <strong>Alçadas de Decisão:</strong> Crie limites financeiros objetivos de gastos por cargo (ex: compras acima de R$ 5.000 dependem de chancela do conselho).
+                    <br><strong>Segregação de Funções:</strong> Divida tarefas administrativas de maneira que quem cota o serviço não seja o mesmo que lança no sistema ou autoriza as transferências bancárias.
+                    <br><strong>Certidões Negativas (CNDs):</strong> Monitore a regularidade fiscal a cada 15 dias para assegurar repasses contínuos de verbas sem entraves burocráticos municipais ou federais.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">3. Segurança de Contratos e Minutas de Parceria</h3>
+                <p>
+                    <strong>Minutas Padronizadas:</strong> Padronize seus contratos de prestação de serviços de autônomos, termos de doação voluntária e termos de parcerias técnicas conjuntas.
+                    <br><strong>Cronogramas Físico-Financeiros:</strong> Só execute repasses para prestadores mediante a validação formal e documental do relatório técnico de entregas operacionais do projeto.
+                    <br><strong>Assinaturas Digitais:</strong> Utilize rotinas de assinaturas e arquivamento digital para manter a integridade, agilidade e rastreabilidade dos documentos em auditorias.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">4. Prestação de Contas e Mitigação Ativa de Glosas</h3>
+                <p>
+                    <strong>Prevenção de Glosas:</strong> Guarde as notas fiscais unificadas com extratos exclusivos da conta do projeto e comprovantes de transferências eletrônicas. Evite faturamento corporativo compartilhado ou uso de dinheiro físico.
+                    <br><strong>Nexo Causal Claro:</strong> Toda e qualquer despesa inserida deve ter justificativa de aplicação ligada diretamente às metas de impacto finalístico do projeto social desenvolvido.
+                    <br><strong>Notas Explicativas:</strong> Use notas explicativas estruturadas para justificar alterações ou desvios orçamentários corriqueiros causados por inflação ou sazonalidade.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5">5. Sustentabilidade, Política de Rateio e Fundo de Reserva</h3>
+                <p>
+                    <strong>Fundo de Reserva:</strong> Separe ativamente entre 5% a 10% de receitas livres (vendas ou doações espontâneas) em uma poupança institucional para cobrir os custos fixos da folha administrativa em meses secos.
+                    <br><strong>Metodologia de Rateio:</strong> Custos de utilidade corporativa geral (energia, sede, administrativo) devem ser distribuídos entre todos os projetos de forma percentual proporcional e submetidos à homologação do conselho.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 6: Assinaturas de Responsabilidade -->
+        <div class="mt-12 pt-8 border-t border-slate-300">
+            <p class="text-[10px] text-center text-slate-400 mb-8 leading-relaxed">
+                Este relatório atesta o autodiagnóstico de metas físicas e operacionais da organização, servindo de roteiro técnico interno de boas práticas em governança corporativa,<br>integridade contábil e sustentabilidade do portfólio no Terceiro Setor.
+            </p>
+            <div class="grid grid-cols-2 gap-12 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="border-b border-slate-400 h-8 mb-2"></div>
+                    <span id="print-sign-lideranca" class="text-xs font-bold text-slate-800 block">Assinatura Liderança/Presidência</span>
+                    <span class="text-[10px] text-slate-400 block">Representante Legal</span>
+                </div>
+                <div class="text-center">
+                    <div class="border-b border-slate-400 h-8 mb-2"></div>
+                    <span id="print-sign-gestor" class="text-xs font-bold text-slate-800 block">Assinatura Responsável Técnico</span>
+                    <span class="text-[10px] text-slate-400 block">Gestor Financeiro / de Projetos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS Logic -->
+    <script>
+        // Data Structures for the specific check-lists (each module contains 4 specific steps)
+        const modulesChecklists = {
+            tripe: [
+                { id: "tripe_1", text: "Definir e estruturar calendário de planejamento orçamentário participativo com as áreas de atuação técnica." },
+                { id: "tripe_2", text: "Implantar uma rotina sistemática de conciliação bancária de caixa executada diariamente." },
+                { id: "tripe_3", text: "Garantir o repasse e processamento mensal de todos os comprovantes para a assessoria de contabilidade." },
+                { id: "tripe_4", text: "Publicar semestralmente os demonstrativos simplificados de DRE e DFC no site ou redes da OSC." }
+            ],
+            gov: [
+                { id: "gov_1", text: "Registrar e protocolar formalmente em cartório todas as atas de reuniões do Conselho Deliberativo." },
+                { id: "gov_2", text: "Redigir e aprovar uma política de compras com exigência de teto financeiro e 3 cotações de preços." },
+                { id: "gov_3", text: "Garantir o levantamento e vigência quinzenal de todas as CNDs fiscais e trabalhistas obrigatórias." },
+                { id: "gov_4", text: "Implementar a segregação de funções estruturada (quem cota, quem aprova e quem paga a conta)." }
+            ],
+            contratos: [
+                { id: "contratos_1", text: "Desenvolver minutas contratuais de Prestação de Serviços homologadas e revisadas juridicamente." },
+                { id: "contratos_2", text: "Adotar o uso de assinaturas e termos de doação por vias digitais rastreáveis e verificáveis." },
+                { id: "contratos_3", text: "Atrelar todos os pagamentos de contratos de serviços a relatórios de entregas de metas técnicas." },
+                { id: "contratos_4", text: "Criar sistema de monitoramento de vigências e aditivos para evitar vedações com repasses." }
+            ],
+            contas: [
+                { id: "contas_1", text: "Estruturar pastas lógicas físicas e em nuvem segregadas de maneira estrita por projeto e rubrica." },
+                { id: "contas_2", text: "Criar uma barreira de controle interno para prevenir notas fiscais vencidas, rasuradas ou de MEIs inativos." },
+                { id: "contas_3", text: "Assegurar o nexo causal inequívoco entre o plano financeiro aprovado e as metas do relatório de impacto." },
+                { id: "contas_4", text: "Elaborar o roteiro de notas explicativas para rateios administrativos justificados por projetos." }
+            ],
+            desafios: [
+                { id: "desafios_1", text: "Determinar uma reserva mínima de caixa para cobrir custos de operação em períodos sazonais." },
+                { id: "desafios_2", text: "Implantar planos plurianuais com metas ativas de diversificação contínua das fontes de receitas." },
+                { id: "desafios_3", text: "Garantir que a metodologia de partilha de rateios administrativos de custos-meio esteja aprovada pelo conselho." },
+                { id: "desafios_4", text: "Promover capacitações e oficinas periódicas de aperfeiçoamento contábil e de compliance para a equipe." }
+            ]
+        };
+
+        // State containing user checks and organizational metadata
+        let userProgress = {
+            checkedIds: [], // array to hold all checked items across all lists
+            associacao: "",
+            projeto: "",
+            lideranca: "",
+            gestor: "",
+            receita: "50000",
+            projetoDesp: "30000",
+            admDesp: "12000"
+        };
+
+        // Window On Load - Setup checklist, calculate defaults, load from localStorage
+        window.onload = function() {
+            // Read state from localStorage if exists to preserve user diagnostic session
+            const savedState = localStorage.getItem('osc_dashboard_progress_v3');
+            if (savedState) {
+                userProgress = JSON.parse(savedState);
+                
+                // Fallbacks
+                if(!userProgress.hasOwnProperty('checkedIds')) userProgress.checkedIds = [];
+                if(!userProgress.hasOwnProperty('associacao')) userProgress.associacao = "";
+                if(!userProgress.hasOwnProperty('projeto')) userProgress.projeto = "";
+                if(!userProgress.hasOwnProperty('lideranca')) userProgress.lideranca = "";
+                if(!userProgress.hasOwnProperty('gestor')) userProgress.gestor = "";
+                if(!userProgress.hasOwnProperty('receita')) userProgress.receita = "50000";
+                if(!userProgress.hasOwnProperty('projetoDesp')) userProgress.projetoDesp = "30000";
+                if(!userProgress.hasOwnProperty('admDesp')) userProgress.admDesp = "12000";
+
+                // Populate screen input fields
+                document.getElementById('info-associacao').value = userProgress.associacao;
+                document.getElementById('info-projeto').value = userProgress.projeto;
+                document.getElementById('info-lideranca').value = userProgress.lideranca;
+                document.getElementById('info-gestor').value = userProgress.gestor;
+
+                // Populate simulator fields
+                document.getElementById('sim-receita').value = userProgress.receita;
+                document.getElementById('sim-despesa-projeto').value = userProgress.projetoDesp;
+                document.getElementById('sim-despesa-adm').value = userProgress.admDesp;
+            }
+            renderAllChecklists();
+            updateThermometer();
+            calculateSimulation();
+        }
+
+        // Save inputs to localStorage in real-time
+        function saveAndSyncInfo() {
+            userProgress.associacao = document.getElementById('info-associacao').value;
+            userProgress.projeto = document.getElementById('info-projeto').value;
+            userProgress.lideranca = document.getElementById('info-lideranca').value;
+            userProgress.gestor = document.getElementById('info-gestor').value;
+
+            // Simulator values
+            userProgress.receita = document.getElementById('sim-receita').value;
+            userProgress.projetoDesp = document.getElementById('sim-despesa-projeto').value;
+            userProgress.admDesp = document.getElementById('sim-despesa-adm').value;
+
+            localStorage.setItem('osc_dashboard_progress_v3', JSON.stringify(userProgress));
+        }
+
+        // Switch Tabs Function (Multi-page like layout without actual routers)
+        function switchTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-pane');
+            tabs.forEach(tab => tab.classList.add('hidden'));
+
+            // Show current active tab
+            document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
+
+            // Style Sidebar buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-indigo-50', 'text-indigo-700', 'font-medium');
+                btn.classList.add('text-slate-600', 'hover:bg-slate-50', 'hover:text-slate-900');
+            });
+
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-slate-600', 'hover:bg-slate-50', 'hover:text-slate-900');
+                activeBtn.classList.add('bg-indigo-50', 'text-indigo-700', 'font-medium');
+            }
+        }
+
+        // Render checklist elements dynamically for each tab
+        function renderAllChecklists() {
+            Object.keys(modulesChecklists).forEach(moduleKey => {
+                const list = modulesChecklists[moduleKey];
+                const container = document.getElementById(`checklist-${moduleKey}`);
+                if (!container) return;
+                container.innerHTML = '';
+
+                list.forEach(item => {
+                    const isChecked = userProgress.checkedIds.includes(item.id);
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = `p-3 rounded-xl border transition-all cursor-pointer flex items-start space-x-3 ${isChecked ? 'bg-indigo-50/50 border-indigo-200' : 'bg-white border-slate-200 hover:border-slate-300'}`;
+                    itemDiv.setAttribute('onclick', `toggleCheckItem('${item.id}')`);
+
+                    itemDiv.innerHTML = `
+                        <div class="mt-0.5 shrink-0">
+                            <div class="w-4 h-4 rounded border flex items-center justify-center transition-all ${isChecked ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-slate-300 bg-white'}">
+                                ${isChecked ? '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>' : ''}
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-medium ${isChecked ? 'text-indigo-900' : 'text-slate-700'}">${item.text}</p>
+                        </div>
+                    `;
+                    container.appendChild(itemDiv);
+                });
+            });
+        }
+
+        // Action when checking/unchecking
+        function toggleCheckItem(id) {
+            const index = userProgress.checkedIds.indexOf(id);
+            if (index > -1) {
+                userProgress.checkedIds.splice(index, 1);
+            } else {
+                userProgress.checkedIds.push(id);
+            }
+            // Save state
+            saveAndSyncInfo();
+            renderAllChecklists();
+            updateThermometer();
+        }
+
+        // Reset user diagnostic progress for ALL checklists
+        function resetAllChecklists() {
+            userProgress.checkedIds = [];
+            userProgress.associacao = "";
+            userProgress.projeto = "";
+            userProgress.lideranca = "";
+            userProgress.gestor = "";
+
+            // Reset inputs on screen
+            document.getElementById('info-associacao').value = "";
+            document.getElementById('info-projeto').value = "";
+            document.getElementById('info-lideranca').value = "";
+            document.getElementById('info-gestor').value = "";
+
+            // Reset simulator fields to default
+            document.getElementById('sim-receita').value = "50000";
+            document.getElementById('sim-despesa-projeto').value = "30000";
+            document.getElementById('sim-despesa-adm').value = "12000";
+
+            saveAndSyncInfo();
+            renderAllChecklists();
+            updateThermometer();
+            calculateSimulation();
+        }
+
+        // Update visual evolution thermometers dynamically
+        function updateThermometer() {
+            // Count progress per module
+            let totalCheckedCount = 0;
+            let totalPossibleCount = 0;
+
+            Object.keys(modulesChecklists).forEach(moduleKey => {
+                const list = modulesChecklists[moduleKey];
+                totalPossibleCount += list.length;
+                let checkedInModule = 0;
+
+                list.forEach(item => {
+                    if (userProgress.checkedIds.includes(item.id)) {
+                        checkedInModule++;
+                        totalCheckedCount++;
+                    }
+                });
+
+                // Calculate progress % for this specific module
+                const moduleProgress = Math.round((checkedInModule / list.length) * 100);
+                
+                // Update local UI elements of each tab
+                const barLocal = document.getElementById(`tab-progress-bar-${moduleKey}`);
+                const textLocal = document.getElementById(`tab-progress-text-${moduleKey}`);
+                if (barLocal) barLocal.style.width = `${moduleProgress}%`;
+                if (textLocal) textLocal.innerText = `${moduleProgress}%`;
+
+                // Update summary row on dashboard
+                const dashBarLocal = document.getElementById(`progress-bar-${moduleKey}`);
+                const dashTextLocal = document.getElementById(`progress-text-${moduleKey}`);
+                if (dashBarLocal) dashBarLocal.style.width = `${moduleProgress}%`;
+                if (dashTextLocal) dashTextLocal.innerText = `${moduleProgress}%`;
+            });
+
+            // Calculate overall progress %
+            const overallProgress = totalPossibleCount > 0 ? Math.round((totalCheckedCount / totalPossibleCount) * 100) : 0;
+
+            // Update Master UI Bars and elements
+            const barFill = document.getElementById('thermometer-fill');
+            const barValue = document.getElementById('thermometer-value');
+            const miniBar = document.getElementById('mini-progress-bar');
+            const miniText = document.getElementById('mini-progress-text');
+
+            if (barFill) barFill.style.width = `${overallProgress}%`;
+            if (barValue) barValue.innerText = `${overallProgress}%`;
+            if (miniBar) miniBar.style.width = `${overallProgress}%`;
+            if (miniText) miniText.innerText = `${overallProgress}%`;
+
+            // Maturity Badge Level determination based on the thermometer percent
+            const badge = document.getElementById('maturity-badge');
+            if (badge) {
+                if (overallProgress <= 30) {
+                    badge.className = "px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800";
+                    badge.innerHTML = `
+                        <p class="font-bold text-sm">Nível Inicial (Risco Alto)</p>
+                        <p class="text-xs text-amber-700/80 mt-1">A organização está vulnerável a imprevistos de caixa e erros contábeis. Siga os passos sugeridos ao lado.</p>
+                    `;
+                } else if (overallProgress <= 70) {
+                    badge.className = "px-4 py-3 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-800";
+                    badge.innerHTML = `
+                        <p class="font-bold text-sm">Nível Intermediário (Em estruturação)</p>
+                        <p class="text-xs text-indigo-700/80 mt-1">Ótimo avanço! Suas rotinas de caixa e conciliação estão estruturadas, mas ainda faltam políticas institucionais formais.</p>
+                    `;
+                } else {
+                    badge.className = "px-4 py-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800";
+                    badge.innerHTML = `
+                        <p class="font-bold text-sm">Nível Avançado (Sustentável e Transparente)</p>
+                        <p class="text-xs text-emerald-700/80 mt-1">Parabéns! Sua OSC possui controles integrados robustos, transparência excelente perante financiadores e minimiza riscos fiscais.</p>
+                    `;
+                }
+            }
+        }
+
+        // Live calculation logic for Simulation of Project health
+        function calculateSimulation() {
+            const receitaInput = parseFloat(document.getElementById('sim-receita').value) || 0;
+            const projInput = parseFloat(document.getElementById('sim-despesa-projeto').value) || 0;
+            const admInput = parseFloat(document.getElementById('sim-despesa-adm').value) || 0;
+
+            const saldo = receitaInput - (projInput + admInput);
+            const formattedSaldo = saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+            const simSaldo = document.getElementById('sim-saldo');
+            const simSaldoTipo = document.getElementById('sim-saldo-tipo');
+            const simRatioText = document.getElementById('sim-ratio-text');
+            const simRatioBar = document.getElementById('sim-ratio-bar');
+            const simRec = document.getElementById('sim-recommendation');
+
+            if (simSaldo) simSaldo.innerText = formattedSaldo;
+
+            // Apply style dynamically according to positive/negative balances
+            if (saldo < 0) {
+                if (simSaldo) simSaldo.className = "text-3xl font-extrabold text-rose-600";
+                if (simSaldoTipo) simSaldoTipo.innerText = "Déficit operacional apurado. Cuidado!";
+            } else {
+                if (simSaldo) simSaldo.className = "text-3xl font-extrabold text-indigo-600";
+                if (simSaldoTipo) simSaldoTipo.innerText = "Superávit operacional apurado.";
+            }
+
+            // Efficiency ratio (how much goes directly to core-social actions / despesas de projetos)
+            const totalDespesa = projInput + admInput;
+            let ratio = 0;
+            if (totalDespesa > 0) {
+                ratio = Math.round((projInput / totalDespesa) * 100);
+            }
+
+            if (simRatioText) simRatioText.innerText = `${ratio}%`;
+            if (simRatioBar) {
+                simRatioBar.style.width = `${Math.min(ratio, 100)}%`;
+                if (ratio < 70) {
+                    simRatioBar.className = "bg-rose-500 h-full";
+                } else {
+                    simRatioBar.className = "bg-emerald-500 h-full";
+                }
+            }
+
+            // Real-time custom system generated recommendation text based on inputs
+            if (saldo < 0) {
+                if (simRec) simRec.innerHTML = `O saldo projetado está em <strong>Déficit</strong>. Busque revisar os custos operacionais (Meio) imediatamente e alinhe parcerias de apoio institucional para equilibrar o caixa antes de iniciar novas etapas.`;
+            } else if (ratio < 70) {
+                if (simRec) simRec.innerHTML = `Embora haja superávit, o indicador de eficiência finalística está abaixo de 70% (${ratio}%). Financiadores de grande porte exigem que o repasse atue fortemente nas despesas do projeto-fim. Ajuste os custos administrativos.`;
+            } else {
+                if (simRec) simRec.innerHTML = `Sua projeção é saudável, alcançando <strong>${ratio}%</strong> de eficiência no projeto-fim! Excelente equilíbrio entre os custos corporativos e a atividade social. Recomendamos aportar 10% do saldo no Fundo de Reserva.`;
+            }
+
+            saveAndSyncInfo();
+        }
+
+        // PREPARATION AND TRIGGER OF NATIVE PRINT SYSTEM
+        function printReport() {
+            // Update metadata inputs before printing
+            saveAndSyncInfo();
+
+            // Set dynamic formatted current date for formal header
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const todayFormatted = new Date().toLocaleDateString('pt-BR', dateOptions);
+            document.getElementById('print-current-date').innerText = todayFormatted;
+
+            // Bind values to printable layout divs
+            document.getElementById('print-associacao').innerText = userProgress.associacao || "Não Informado";
+            document.getElementById('print-projeto').innerText = userProgress.projeto || "Não Informado";
+            document.getElementById('print-lideranca').innerText = userProgress.lideranca || "Não Informado";
+            document.getElementById('print-gestor').innerText = userProgress.gestor || "Não Informado";
+
+            // Bind signatures naming for authenticity
+            document.getElementById('print-sign-lideranca').innerText = userProgress.lideranca || "Representante Legal da Organização";
+            document.getElementById('print-sign-gestor').innerText = userProgress.gestor || "Responsável Técnico";
+
+            // Bind values of dynamic calculations
+            const rec = parseFloat(document.getElementById('sim-receita').value) || 0;
+            const proj = parseFloat(document.getElementById('sim-despesa-projeto').value) || 0;
+            const adm = parseFloat(document.getElementById('sim-despesa-adm').value) || 0;
+            const sld = rec - (proj + adm);
+            
+            let coreRatio = 0;
+            if((proj + adm) > 0) {
+                coreRatio = Math.round((proj / (proj + adm)) * 100);
+            }
+
+            document.getElementById('print-val-receita').innerText = rec.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.getElementById('print-val-projeto').innerText = proj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.getElementById('print-val-adm').innerText = adm.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            
+            const saldoPrintEl = document.getElementById('print-val-saldo');
+            saldoPrintEl.innerText = sld.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            if(sld < 0) {
+                saldoPrintEl.className = "text-sm font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded";
+            } else {
+                saldoPrintEl.className = "text-sm font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded";
+            }
+
+            // Ratio of direct spending
+            document.getElementById('print-ratio-text').innerText = `${coreRatio}%`;
+            const prRatioBar = document.getElementById('print-ratio-bar');
+            prRatioBar.style.width = `${Math.min(coreRatio, 100)}%`;
+            if (coreRatio < 70) {
+                prRatioBar.className = "bg-rose-500 h-full";
+            } else {
+                prRatioBar.className = "bg-emerald-500 h-full";
+            }
+
+            // Bind recommend text from original calculated
+            document.getElementById('print-recommendation-text').innerHTML = document.getElementById('sim-recommendation').innerHTML;
+
+            // Bind checklist items status and local progress metrics per module for printable layout
+            let totalCheckedCount = 0;
+            let totalPossibleCount = 0;
+
+            Object.keys(modulesChecklists).forEach(moduleKey => {
+                const list = modulesChecklists[moduleKey];
+                totalPossibleCount += list.length;
+                let checkedInModule = 0;
+
+                const printChecklistContainer = document.getElementById(`print-checklist-${moduleKey}`);
+                if (printChecklistContainer) {
+                    printChecklistContainer.innerHTML = '';
+                    
+                    list.forEach(item => {
+                        const checked = userProgress.checkedIds.includes(item.id);
+                        if (checked) checkedInModule++;
+
+                        const statusRow = document.createElement('div');
+                        statusRow.className = "flex items-center justify-between py-1 text-[10px] border-b border-slate-100 last:border-b-0";
+                        statusRow.innerHTML = `
+                            <span class="text-slate-600 truncate mr-4 max-w-[80%]">${item.text}</span>
+                            <span class="font-bold uppercase tracking-wider text-[8px] px-1.5 py-0.5 rounded shrink-0 ${checked ? 'text-emerald-700 bg-emerald-100/70' : 'text-slate-400 bg-slate-100'}">
+                                ${checked ? 'CONCLUÍDO' : 'PENDENTE'}
+                            </span>
+                        `;
+                        printChecklistContainer.appendChild(statusRow);
+                    });
+                }
+
+                const moduleProgress = Math.round((checkedInModule / list.length) * 100);
+                const printLocalProgEl = document.getElementById(`print-sub-${moduleKey}`);
+                if (printLocalProgEl) printLocalProgEl.innerText = `Progresso: ${moduleProgress}%`;
+
+                if (checkedInModule === list.length) {
+                    if (printLocalProgEl) printLocalProgEl.className = "font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded text-[10px]";
+                } else {
+                    if (printLocalProgEl) printLocalProgEl.className = "font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]";
+                }
+            });
+
+            const overallProgress = totalPossibleCount > 0 ? Math.round((totalCheckedCount / totalPossibleCount) * 100) : 0;
+            document.getElementById('print-maturity-percent').innerText = `${overallProgress}%`;
+            document.getElementById('print-maturity-bar').style.width = `${overallProgress}%`;
+
+            // Maturity description setup
+            const printDesc = document.getElementById('print-maturity-desc');
+            if (overallProgress <= 30) {
+                printDesc.className = "p-3 bg-amber-50 border border-amber-200 text-amber-800 rounded-lg text-xs";
+                printDesc.innerText = "Nível Inicial (Risco Alto). A organização está vulnerável a imprevistos de caixa e erros contábeis. Recomenda-se estruturar mapeamento de funções e planejamento de caixas imediatamente.";
+            } else if (overallProgress <= 70) {
+                printDesc.className = "p-3 bg-indigo-50 border border-indigo-200 text-indigo-800 rounded-lg text-xs";
+                printDesc.innerText = "Nível Intermediário (Em estruturação). Ótimo avanço! Suas rotinas de caixa e conciliação estão organizadas, restando agora formalizar as políticas institucionais com o conselho.";
+            } else {
+                printDesc.className = "p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-lg text-xs";
+                printDesc.innerText = "Nível Avançado (Sustentável e Transparente). Excelente! Sua OSC possui controles integrados robustos, transparência impecável e mitiga eficientemente os riscos fiscais.";
+            }
+
+            // Call native printing browser mechanism
+            window.print();
+        }
+    </script>
+</body>
+</html>
